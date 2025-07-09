@@ -1,19 +1,94 @@
-/* 這是 CSS 的註解，不會被執行，只是用來做說明 */
-
+/* 設定整個網頁的通用樣式 */
 body {
-    background-color: #f0f8ff; /* 設定整個網頁的背景顏色為淺藍色 */
-    font-family: Arial, sans-serif; /* 設定網頁的字體為 Arial，如果沒有就用預設的無襯線字體 */
-    margin: 20px; /* 設定網頁內容與邊緣的距離 */
+    background-color: #f0f8ff; /* 淺藍色背景 */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* 設定字體 */
+    margin: 0; /* 移除預設的邊距 */
+    padding: 20px; /* 內邊距，讓內容不會貼著邊緣 */
+    color: #333; /* 文字顏色 */
+    line-height: 1.6; /* 行高，讓文字更好閱讀 */
 }
 
+/* H1 標題的樣式 */
 h1 {
-    color: #4682b4; /* 設定 H1 標題的顏色為藍灰色 */
-    text-align: center; /* 設定 H1 標題文字置中 */
-    border-bottom: 2px solid #4682b4; /* 在 H1 標題下方加上一條藍灰色的線 */
-    padding-bottom: 10px; /* 設定 H1 標題和下方線條的距離 */
+    color: #4682b4; /* 藍灰色文字 */
+    text-align: center; /* 文字置中 */
+    border-bottom: 2px solid #4682b4; /* 底部邊框線 */
+    padding-bottom: 10px; /* 邊框線下方的內邊距 */
+    margin-top: 30px; /* 標題上方的外邊距 */
 }
 
+/* H2 標題的樣式 */
+h2 {
+    color: #2c3e50; /* 深藍色文字 */
+    text-align: center;
+    margin-top: 25px;
+}
+
+/* 段落文字的樣式 */
 p {
-    color: #333; /* 設定段落文字的顏色為深灰色 */
-    line-height: 1.6; /* 設定段落的行高，讓文字更容易閱讀 */
+    margin-bottom: 15px;
+    text-align: justify; /* 文字兩端對齊 */
+}
+
+/* 按鈕的通用樣式 */
+button {
+    background-color: #5cb85c; /* 綠色背景 */
+    color: white; /* 白色文字 */
+    padding: 10px 15px; /* 內邊距 */
+    border: none; /* 無邊框 */
+    border-radius: 5px; /* 圓角 */
+    cursor: pointer; /* 滑鼠移上去變成手形 */
+    font-size: 16px;
+    margin: 5px; /* 按鈕間距 */
+    transition: background-color 0.3s ease; /* 背景色漸變效果 */
+}
+
+button:hover {
+    background-color: #4cae4c; /* 滑鼠移上去時變深綠色 */
+}
+
+/* Flexbox 導覽列樣式 */
+.navbar {
+    background-color: #333; /* 導覽列的背景顏色 */
+    padding: 10px 0; /* 導覽列的上下內邊距 */
+    display: flex; /* 啟用 Flexbox，讓裡面的項目可以彈性排列 */
+    justify-content: space-around; /* 讓導覽項目平均分散在導覽列中 */
+    align-items: center; /* 讓導覽項目垂直置中 */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* 導覽列的陰影效果 */
+}
+
+.nav-item {
+    color: white; /* 連結文字顏色 */
+    text-decoration: none; /* 移除連結底線 */
+    padding: 8px 18px; /* 連結內邊距 */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* 滑鼠移入時的漸變效果和縮放效果 */
+    border-radius: 5px; /* 圓角 */
+}
+
+.nav-item:hover {
+    background-color: #555; /* 滑鼠移入時的背景顏色 */
+    transform: translateY(-2px); /* 滑鼠移入時稍微向上移動 */
+}
+
+/* 響應式設計：Media Queries - 當螢幕寬度小於或等於 768px 時套用以下樣式 */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* 導覽列項目從水平排列改為垂直排列 */
+        align-items: flex-start; /* 讓導覽項目靠左對齊 */
+        padding: 10px; /* 調整內邊距 */
+    }
+
+    .nav-item {
+        width: calc(100% - 20px); /* 導覽項目佔滿整個導覽列的寬度，減去左右 padding */
+        text-align: center; /* 連結文字置中 */
+        margin: 5px 0; /* 導覽項目上下間距 */
+    }
+
+    h1 {
+        font-size: 24px; /* 手機上標題字體小一點 */
+    }
+
+    body {
+        padding: 15px; /* 手機上頁面邊距小一點 */
+    }
 }

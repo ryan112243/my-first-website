@@ -2,14 +2,28 @@
 <html>
 <head>
     <title>我的第一個網頁</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <nav class="navbar">
+        <a href="#" class="nav-item">首頁</a>
+        <a href="#" class="nav-item">關於我們</a>
+        <a href="#" class="nav-item">產品</a>
+        <a href="#" class="nav-item">聯絡我們</a>
+    </nav>
+
     <h1>哈囉，世界！</h1>
-    <p>這是我自己做的第一個網頁！</p>
+    <p>這是我自己做的第一個網頁，包含各種有趣的功能！</p>
 
     <button onclick="changeText()">點我改變文字</button>
-    <p id="myText">這是一段可以被改變的文字。</p>
+    <p id="myText">這是一段可以被 JavaScript 改變的文字。</p>
+
+    <div id="contentArea" style="margin-top: 20px;">
+        <h2>點擊下方按鈕新增內容</h2>
+        <button onclick="addContent()">新增內容</button>
+        <button onclick="removeLastContent()">移除最後一個內容</button>
+    </div>
 
     <script src="script.js"></script>
 </body>
