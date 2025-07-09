@@ -1,0 +1,19 @@
+/* 這是 CSS 的註解，不會被執行，只是用來做說明 */
+
+body {
+    background-color: #f0f8ff; /* 設定整個網頁的背景顏色為淺藍色 */
+    font-family: Arial, sans-serif; /* 設定網頁的字體為 Arial，如果沒有就用預設的無襯線字體 */
+    margin: 20px; /* 設定網頁內容與邊緣的距離 */
+}
+
+h1 {
+    color: #4682b4; /* 設定 H1 標題的顏色為藍灰色 */
+    text-align: center; /* 設定 H1 標題文字置中 */
+    border-bottom: 2px solid #4682b4; /* 在 H1 標題下方加上一條藍灰色的線 */
+    padding-bottom: 10px; /* 設定 H1 標題和下方線條的距離 */
+}
+
+p {
+    color: #333; /* 設定段落文字的顏色為深灰色 */
+    line-height: 1.6; /* 設定段落的行高，讓文字更容易閱讀 */
+}
